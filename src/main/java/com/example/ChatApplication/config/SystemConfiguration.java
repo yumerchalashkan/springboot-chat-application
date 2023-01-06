@@ -13,11 +13,16 @@ public class SystemConfiguration implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/message").setAllowedOriginPatterns("*").withSockJS();
+        registry.addEndpoint("/disconnect").setAllowedOriginPatterns("*").withSockJS();
+        registry.addEndpoint("/connect").setAllowedOriginPatterns("*").withSockJS();
     }
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        registry.enableSimpleBroker("/channel");
+        registry.enableSimpleBroker("/channel", "/update");
+
+
+
     }
 }
 
