@@ -1,5 +1,7 @@
 # SPRING BOOT CHAT APPLICATION
-## Summary
+### Demo Link
+https://quiet-crostata-0b6fc2.netlify.app/
+## About The Project
 In this project, a real-time chat application was developed using the Spring Boot framework. Real-time communication is a crucial aspect of chat applications, and WebSockets provide a suitable solution for this. To handle WebSockets communication, the Spring framework provides support through its WebSocket support.
 
 The first step in implementing WebSockets in a Spring Boot application is to set up the WebSocket configuration. In this project, a configuration class was created that implements the WebSocketMessageBrokerConfigurer interface. This interface provides methods to configure the WebSocket message broker. The registerStompEndpoints method was overridden to set up endpoints for STOMP messaging using SockJS. SockJS is used to provide fallback options for clients that don't support WebSockets. Three endpoints, ***"/message"***, ***"/disconnect"***, and ***"/connect"*** were created and set to allow connections from any origin. The configureMessageBroker method was overridden to enable a simple message broker and set up destination prefixes for message handling methods.
