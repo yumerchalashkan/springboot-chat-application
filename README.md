@@ -1,6 +1,4 @@
 # SPRING BOOT CHAT APPLICATION
-### Demo Link
-https://quiet-crostata-0b6fc2.netlify.app/
 ## About The Project
 In this project, a real-time chat application was developed using the Spring Boot framework. Real-time communication is a crucial aspect of chat applications, and WebSockets provide a suitable solution for this. To handle WebSockets communication, the Spring framework provides support through its WebSocket support.
 
